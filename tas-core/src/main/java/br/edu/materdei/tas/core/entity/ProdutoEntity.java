@@ -4,13 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 
 @Entity
 @Getter
 @Setter
 @Table(name = "Produto")
-public class ProdutoEntity {
+public class ProdutoEntity implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
