@@ -13,12 +13,8 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.4.10.Final</version>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
-            <scope>provided</scope>
-        </dependency>
+        
+        <!-- SPRING FRAMEWORK -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -29,13 +25,17 @@
             <artifactId>spring-orm</artifactId>
             <version>5.2.5.RELEASE</version>
         </dependency>
+        
+        <!-- SPRING DATA -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
             <version>2.3.0.RELEASE</version>
         </dependency>
-
+            
     </dependencies>
+    
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
