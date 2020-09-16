@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tas-compra" />
+        <module name="tas-estoque" />
+        <module name="tas-venda" />
+        <module name="tas-server" />
+        <module name="tas-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tas-compra" target="1.8" />
+      <module name="tas-core" target="1.8" />
+      <module name="tas-estoque" target="1.8" />
+      <module name="tas-server" target="1.8" />
+      <module name="tas-venda" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="tas-server" options="-parameters" />
+    </option>
+  </component>
+</project>

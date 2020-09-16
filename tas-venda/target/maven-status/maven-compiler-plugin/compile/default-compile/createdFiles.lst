@@ -1,0 +1,10 @@
+br\edu\materdei\tas\venda\repository\PedidoRepository.class
+br\edu\materdei\tas\venda\service\ClienteService.class
+br\edu\materdei\tas\venda\entity\PedidoEntity.class
+br\edu\materdei\tas\venda\entity\ClienteEntity.class
+br\edu\materdei\tas\venda\service\PedidoService.class
+br\edu\materdei\tas\venda\entity\ItemPedidoEntity.class
+br\edu\materdei\tas\venda\entity\VendaEntity.class
+br\edu\materdei\tas\venda\repository\VendaRepository.class
+br\edu\materdei\tas\venda\repository\ClienteRepository.class
+br\edu\materdei\tas\venda\service\VendaService.class

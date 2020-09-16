@@ -1,0 +1,7 @@
+br\edu\materdei\tas\compra\entity\CompraEntity.class
+br\edu\materdei\tas\compra\repository\CompraRepository.class
+br\edu\materdei\tas\compra\entity\FornecedorEntity.class
+br\edu\materdei\tas\compra\repository\FornecedorRepository.class
+br\edu\materdei\tas\compra\entity\ItemCompraEntity.class
+br\edu\materdei\tas\compra\service\CompraService.class
+br\edu\materdei\tas\compra\service\FornecedorService.class

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TAS.iml" filepath="$PROJECT_DIR$/.idea/TAS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TAS-master.iml" filepath="$PROJECT_DIR$/.idea/TAS-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tas-compra/tas-compra.iml" filepath="$PROJECT_DIR$/tas-compra/tas-compra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tas-core/tas-core.iml" filepath="$PROJECT_DIR$/tas-core/tas-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tas-estoque/tas-estoque.iml" filepath="$PROJECT_DIR$/tas-estoque/tas-estoque.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tas-server/tas-server.iml" filepath="$PROJECT_DIR$/tas-server/tas-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tas-venda/tas-venda.iml" filepath="$PROJECT_DIR$/tas-venda/tas-venda.iml" />
     </modules>
   </component>
 </project>

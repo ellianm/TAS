@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: br.edu.materdei:tas-venda:1.0.2008.00">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/edu/materdei/tas-venda/1.0.2008.00/tas-venda-1.0.2008.00.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/br/edu/materdei/tas-venda/1.0.2008.00/tas-venda-1.0.2008.00-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/br/edu/materdei/tas-venda/1.0.2008.00/tas-venda-1.0.2008.00-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
