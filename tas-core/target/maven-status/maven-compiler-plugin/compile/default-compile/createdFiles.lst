@@ -1,9 +1,0 @@
-br\edu\materdei\tas\core\service\GrupoService.class
-br\edu\materdei\tas\core\entity\ProdutoEntity.class
-br\edu\materdei\tas\core\entity\Pessoa.class
-br\edu\materdei\tas\core\service\IBaseService.class
-br\edu\materdei\tas\core\service\ProdutoService.class
-br\edu\materdei\tas\core\repository\GrupoRepository.class
-br\edu\materdei\tas\core\repository\ProdutoRepository.class
-br\edu\materdei\tas\core\entity\GrupoEntity.class
-br\edu\materdei\tas\core\exception\ResourceNotFoundException.class
