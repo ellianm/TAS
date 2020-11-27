@@ -3,7 +3,6 @@ package br.edu.materdei.tas.venda.entity;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +15,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "venda")
 public class VendaEntity {
+
     @Id 
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Integer id;
@@ -26,7 +26,7 @@ public class VendaEntity {
     @Temporal(TemporalType.DATE)
     private Date dtvenda;
     
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(nullable = false)
     private PedidoEntity pedido;
 

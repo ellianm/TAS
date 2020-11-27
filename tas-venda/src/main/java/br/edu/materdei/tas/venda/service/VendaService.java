@@ -6,6 +6,7 @@ import br.edu.materdei.tas.venda.entity.PedidoEntity;
 import br.edu.materdei.tas.venda.entity.VendaEntity;
 import br.edu.materdei.tas.venda.repository.PedidoRepository;
 import br.edu.materdei.tas.venda.repository.VendaRepository;
+
 import java.util.Date;
 import java.util.List;
 import javax.transaction.Transactional;
@@ -16,10 +17,10 @@ import org.springframework.stereotype.Service;
 public class VendaService implements IBaseService<VendaEntity>{
 
     @Autowired
-    private VendaRepository repository;
-    
-    @Autowired
     private PedidoRepository pedidoRepository;
+
+    @Autowired
+    private VendaRepository repository;
     
     @Override
      @Transactional
@@ -37,43 +38,39 @@ public class VendaService implements IBaseService<VendaEntity>{
     @Override
     @Transactional
     public VendaEntity save(VendaEntity entity) {
-        //Retorno o primeiro registro por order de codigo decrescente
         VendaEntity ultimo = this.repository.findFirstByOrderByCodigoDesc();
-        
+
         //Incremento o codigo utilizando uma variavel de controle do tipo integer
-        Integer codigo = (ultimo == null) ? 0 : Integer.valueOf(ultimo.getCodigo());
+        Integer codigo = (ultimo == null) ? 0 : Integer.parseInt(ultimo.getCodigo());
         codigo++;
-        
+
         //Atribuo o novo codigo a venda que está sendo salva
         entity.setCodigo(String.format("%06d", codigo)); //Isto, faz isto: 6 -> 000006
-                
+
         //Salvo a venda
         VendaEntity salvo = repository.saveAndFlush(entity);
-        
+
         //Marco o pedido como faturado
         PedidoEntity pedido = salvo.getPedido();
         pedido.setDtfaturado(new Date());
-        
+
         pedidoRepository.save(pedido);
-        
+
         return salvo;
+        //return repository.saveAndFlush(entity);
     }
 
     @Override
-    @Transactional
+     @Transactional
     public void delete(Integer id) throws ResourceNotFoundException {
-        //Pego a venda pelo ID
-        VendaEntity venda = this.repository.getOne(id);
-        
-        //Excluo a venda
-        repository.deleteById(venda.getId());
-        
-        //Pego o pedido da venda para remover a data de faturado
+
+        VendaEntity venda = repository.getOne(id);
         PedidoEntity pedido = venda.getPedido();
+        //Seta o pedido como null
         pedido.setDtfaturado(null);
-        
-        //Salvo a alteração feita no pedido
-        this.pedidoRepository.save(pedido);
+        //salva o pedido
+        pedidoRepository.save(pedido);
+        repository.deleteById(id);
     }
     
 }

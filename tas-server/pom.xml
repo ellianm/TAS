@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.edu.materdei</groupId>
     <artifactId>tas-server</artifactId>
-    <version>1.0.2009.00</version>
+    <version>1.0.2008.00</version>
     <packaging>jar</packaging>
     
     <parent>
@@ -14,9 +14,7 @@
         
     
     <dependencies>
-        
-                
-        <!-- SPRING BOOT -->
+        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -52,17 +50,14 @@
             <artifactId>tas-estoque</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>tas-agendamento</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

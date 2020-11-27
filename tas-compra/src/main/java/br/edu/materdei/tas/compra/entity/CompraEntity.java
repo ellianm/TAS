@@ -1,20 +1,9 @@
 package br.edu.materdei.tas.compra.entity;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import java.util.Set;
 
 @Entity
 @Table(name = "compra")
@@ -27,82 +16,52 @@ public class CompraEntity {
     
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date dtcompra;
+    private Date dtCompra;
     
     @ManyToOne
     @JoinColumn(nullable = false)
     private FornecedorEntity fornecedor;
     
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<ItemCompraEntity> itens;
+    private Set<ItemCompraEntity> itens;
 
-    /**
-     * @return the id
-     */
     public Integer getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
     public void setId(Integer id) {
         this.id = id;
     }
 
-    /**
-     * @return the codigo
-     */
     public String getCodigo() {
         return codigo;
     }
 
-    /**
-     * @param codigo the codigo to set
-     */
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
-    /**
-     * @return the dtcompra
-     */
     public Date getDtcompra() {
-        return dtcompra;
+        return dtCompra;
     }
 
-    /**
-     * @param dtcompra the dtcompra to set
-     */
     public void setDtcompra(Date dtcompra) {
-        this.dtcompra = dtcompra;
+        this.dtCompra = dtcompra;
     }
 
-    /**
-     * @return the fornecedor
-     */
     public FornecedorEntity getFornecedor() {
         return fornecedor;
     }
 
-    /**
-     * @param fornecedor the fornecedor to set
-     */
     public void setFornecedor(FornecedorEntity fornecedor) {
         this.fornecedor = fornecedor;
     }
 
-    /**
-     * @return the itens
-     */
-    public List<ItemCompraEntity> getItens() {
+    public Set<ItemCompraEntity> getItens() {
         return itens;
     }
 
-    /**
-     * @param itens the itens to set
-     */
-    public void setItens(List<ItemCompraEntity> itens) {
+    public void setItens(Set<ItemCompraEntity> itens) {
         this.itens = itens;
     }
 }

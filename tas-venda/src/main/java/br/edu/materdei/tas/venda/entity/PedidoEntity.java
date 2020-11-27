@@ -1,20 +1,9 @@
 package br.edu.materdei.tas.venda.entity;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import java.util.Set;
 
 @Entity
 @Table(name = "pedido")
@@ -32,12 +21,12 @@ public class PedidoEntity {
     @Temporal(TemporalType.DATE)
     private Date dtfaturado;
     
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(nullable = false)
     private ClienteEntity cliente;
     
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<ItemPedidoEntity> itens;
+    private Set<ItemPedidoEntity> itens;
 
     /**
      * @return the id
@@ -112,14 +101,14 @@ public class PedidoEntity {
     /**
      * @return the itens
      */
-    public List<ItemPedidoEntity> getItens() {
+    public Set<ItemPedidoEntity> getItens() {
         return itens;
     }
 
     /**
      * @param itens the itens to set
      */
-    public void setItens(List<ItemPedidoEntity> itens) {
+    public void setItens(Set<ItemPedidoEntity> itens) {
         this.itens = itens;
     }
 
