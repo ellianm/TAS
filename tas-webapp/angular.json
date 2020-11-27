@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "tas-webapp"
+  "defaultProject": "tas-webapp",
+  "cli": {
+    "analytics": false
+  }
 }

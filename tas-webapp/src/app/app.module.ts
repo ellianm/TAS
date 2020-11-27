@@ -41,6 +41,9 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { PedidoComponent } from './pedido/pedido.component';
 import { TotalPedidoPipe } from './_pipes/total-pedido.pipe';
 import { ItemPedidoComponent } from './_components/item-pedido/item-pedido.component';
+import { AgendamentoItemComponent } from './_components/item-agendamento/item-agendamento.component';
+import { AgendamentoPedidoComponent } from './agendamentos/agendamento-pedido/agendamento-pedido.component';
+import { AgendamentoCompraComponent } from './agendamentos/agendamento-compra/agendamento-compra.component';
 registerLocaleData(localept , 'pt');
 
 @NgModule({
@@ -52,7 +55,10 @@ registerLocaleData(localept , 'pt');
     ClienteComponent,
     PedidoComponent,
     TotalPedidoPipe,
-    ItemPedidoComponent
+    ItemPedidoComponent,
+    AgendamentoItemComponent,
+    AgendamentoPedidoComponent,
+    AgendamentoCompraComponent
   ],
   imports: [
     BrowserModule,

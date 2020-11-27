@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Adicionar Item Agendamento</h1>
+<div mat-dialog-content>
+  <mat-form-field class="full-width">
+    <mat-select placeholder="Produto" [(ngModel)]="itemAgendamento.produto" (ngModelChange)="changeItem()">
+      <mat-option *ngFor="let produto of produtos" [value]="produto">
+        {{produto.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="flex-container">
+    <mat-form-field class="full-width">
+      <input matInput type="date" placeholder="Data Prevista" [(ngModel)]="itemAgendamento.dtPrevista">
+      <mat-error *ngIf="!valid">"Já existe uma entrega prevista nesta data para este produto</mat-error>
+    </mat-form-field>
+
+    <span class="spacer"></span>
+    <mat-form-field class="full-width">
+      <input matInput type="date" placeholder="Data Entregue" [(ngModel)]="itemAgendamento.dtEntregue">
+    </mat-form-field>
+
+    <span class="spacer"></span>
+    
+    <mat-form-field class="full-width">
+      <input matInput type="number" placeholder="Qtd. Prevista" [(ngModel)]="itemAgendamento.qtdPrevista">
+    </mat-form-field>
+    
+    <span class="spacer"></span>
+
+    <mat-form-field class="full-width">
+      <input matInput stpe="0.01" type="number" placeholder="Qtd. Entregue" [(ngModel)]="itemAgendamento.qtdEntregue">
+    </mat-form-field>
+    <span class="spacer"></span>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onDismiss()">CANCELAR</button>
+  <button mat-raised-button [disabled]="!valid" (click)="onConfirm()">CONFIRMAR</button>
+</div>
