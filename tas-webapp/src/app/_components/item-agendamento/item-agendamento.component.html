@@ -8,7 +8,6 @@
     </mat-select>
   </mat-form-field>
 
-  <div class="flex-container">
     <mat-form-field class="full-width">
       <input matInput type="date" placeholder="Data Prevista" [(ngModel)]="itemAgendamento.dtPrevista">
       <mat-error *ngIf="!valid">"Já existe uma entrega prevista nesta data para este produto</mat-error>
@@ -31,7 +30,6 @@
       <input matInput stpe="0.01" type="number" placeholder="Qtd. Entregue" [(ngModel)]="itemAgendamento.qtdEntregue">
     </mat-form-field>
     <span class="spacer"></span>
-  </div>
 </div>
 
 <div mat-dialog-actions align="end">

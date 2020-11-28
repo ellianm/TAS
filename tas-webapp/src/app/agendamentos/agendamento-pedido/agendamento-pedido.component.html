@@ -27,7 +27,7 @@
             </div>
             <span class="spacer"></span>
             <mat-form-field>
-              <mat-select placeholder="Situação" [(ngModel)]="agendamento.situacao">
+              <mat-select  placeholder="Situação" [(ngModel)]="agendamento.situacao">
                 <mat-option value="0">Pendente</mat-option>
                 <mat-option value="1">Parcialmente Entregue</mat-option>
                 <mat-option value="2">Cancelado</mat-option>
@@ -52,7 +52,7 @@
               </mat-select>
             </mat-form-field>
           </div>
-          <mat-toolbar *ngIf="!agendamento.id">
+          <mat-toolbar>
             <span class="spacer"></span>
             <button mat-button (click)="sidenav.close()">CANCELAR</button>
             <button mat-raised-button color="primary" (click)="confirmar()"

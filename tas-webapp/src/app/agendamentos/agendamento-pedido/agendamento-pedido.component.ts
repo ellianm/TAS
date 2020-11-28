@@ -56,6 +56,7 @@ export class AgendamentoPedidoComponent implements OnInit {
 
   private openSidenav(agendamento: AgendamentoPedidoEntity): void {
     this.agendamento = agendamento;
+    this.agendamento.situacao = String(agendamento.situacao)
     this.sidenav.open();
   }
   private showError(text: string, error: any): void {
@@ -75,6 +76,7 @@ export class AgendamentoPedidoComponent implements OnInit {
   }
 
   public editar(agendamento: AgendamentoPedidoEntity): void {
+    
     this.openSidenav(Object.assign({}, agendamento));
   }
 

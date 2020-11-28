@@ -27,7 +27,7 @@ export class AgendamentoPedidoService {
 
   
   public excluir(id: number) {
-    return this.http.delete(environment.urlSRV +'/api/agendamentosPedidos'+ id);
+    return this.http.delete(environment.urlSRV +'/api/agendamentosPedidos/'+ id);
   }
   
   private adicionar(agendamento: AgendamentoPedidoEntity) {
@@ -35,7 +35,7 @@ export class AgendamentoPedidoService {
   }
 
   private alterar(agendamento: AgendamentoPedidoEntity) {
-    return this.http.put(environment.urlSRV +'/api/agendamentosPedidos'+ agendamento.id, agendamento);
+    return this.http.put(environment.urlSRV +'/api/agendamentosPedidos/'+ agendamento.id, agendamento);
   }
 
 }

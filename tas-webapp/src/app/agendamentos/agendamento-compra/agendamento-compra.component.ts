@@ -56,8 +56,8 @@ export class AgendamentoCompraComponent implements OnInit {
   }
 
   private openSidenav(agendamento: AgendamentoCompraEntity): void {
-    console.log(agendamento)
     this.agendamento = agendamento;
+    this.agendamento.situacao = String(agendamento.situacao)
     this.sidenav.open();
   }
   private showError(text: string, error: any): void {
